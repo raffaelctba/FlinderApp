@@ -40,10 +40,25 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate{
         
         if let userToken = result.token
         {
+            
             //Get user access token
             let token:FBSDKAccessToken = result.token
             print("Token = \(FBSDKAccessToken.currentAccessToken().tokenString)")
              print("UserId = \(FBSDKAccessToken.currentAccessToken().userID)")
+          
+            let req = FBSDKGraphRequest(graphPath: "me", parameters: ["fields":"email,name,birthday,gender"], tokenString: FBSDKAccessToken.currentAccessToken().tokenString, version: nil, HTTPMethod: "GET")
+            req.startWithCompletionHandler({ (connection, result, error : NSError!) -> Void in
+                if(error == nil)
+                {
+                    print("result \(result)")
+                    print(result["gender"])
+               
+                }
+                else
+                {
+                    print("error \(error)")
+                }
+            })
         
          let protectedPage = self.storyboard?.instantiateViewControllerWithIdentifier("ProtectedPageViewController") as! ProtectedPageViewController
             
