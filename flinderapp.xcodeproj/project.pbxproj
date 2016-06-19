@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		4D1DF20D1D16752800BD6010 /* UserListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1DF20C1D16752800BD6010 /* UserListViewController.swift */; };
+		4D1DF20F1D168F4800BD6010 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1DF20E1D168F4800BD6010 /* LoginViewController.swift */; };
+		4D1DF2111D16914A00BD6010 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D1DF2101D16914A00BD6010 /* FBSDKCoreKit.framework */; };
+		4D1DF2131D16915300BD6010 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D1DF2121D16915300BD6010 /* FBSDKLoginKit.framework */; };
+		4D1DF2151D16915C00BD6010 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D1DF2141D16915C00BD6010 /* FBSDKShareKit.framework */; };
+		4D1DF2191D169F7200BD6010 /* ProtectedPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1DF2181D169F7200BD6010 /* ProtectedPageViewController.swift */; };
 		A2BD20971AC8A731007F7181 /* QSTodoDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A2BD20951AC8A731007F7181 /* QSTodoDataModel.xcdatamodeld */; };
 		A2D9CBC41943C2540017F096 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D9CBC31943C2540017F096 /* AppDelegate.swift */; };
 		A2D9CBCC1943C2540017F096 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2D9CBCA1943C2540017F096 /* Main.storyboard */; };
@@ -20,6 +25,11 @@
 
 /* Begin PBXFileReference section */
 		4D1DF20C1D16752800BD6010 /* UserListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserListViewController.swift; sourceTree = "<group>"; };
+		4D1DF20E1D168F4800BD6010 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		4D1DF2101D16914A00BD6010 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		4D1DF2121D16915300BD6010 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		4D1DF2141D16915C00BD6010 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
+		4D1DF2181D169F7200BD6010 /* ProtectedPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProtectedPageViewController.swift; sourceTree = "<group>"; };
 		A2BD20961AC8A731007F7181 /* QSTodoDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = QSTodoDataModel.xcdatamodel; sourceTree = "<group>"; };
 		A2D9CBBE1943C2540017F096 /* flinderapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = flinderapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2D9CBC21943C2540017F096 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -38,6 +48,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D1DF2151D16915C00BD6010 /* FBSDKShareKit.framework in Frameworks */,
+				4D1DF2131D16915300BD6010 /* FBSDKLoginKit.framework in Frameworks */,
+				4D1DF2111D16914A00BD6010 /* FBSDKCoreKit.framework in Frameworks */,
 				A3BBD77D1C05181600DD0DB0 /* MicrosoftAzureMobile.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -75,6 +88,8 @@
 				A2D9CBE81943D1340017F096 /* flinderapp-Bridging-Header.h */,
 				A31A89F61BF3FDFA00C7B656 /* Launch Screen.storyboard */,
 				4D1DF20C1D16752800BD6010 /* UserListViewController.swift */,
+				4D1DF20E1D168F4800BD6010 /* LoginViewController.swift */,
+				4D1DF2181D169F7200BD6010 /* ProtectedPageViewController.swift */,
 			);
 			path = flinderapp;
 			sourceTree = "<group>";
@@ -90,6 +105,9 @@
 		A2D9CBE51943CB520017F096 /* frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4D1DF2141D16915C00BD6010 /* FBSDKShareKit.framework */,
+				4D1DF2121D16915300BD6010 /* FBSDKLoginKit.framework */,
+				4D1DF2101D16914A00BD6010 /* FBSDKCoreKit.framework */,
 				A3BBD77C1C05181600DD0DB0 /* MicrosoftAzureMobile.framework */,
 			);
 			name = frameworks;
@@ -168,9 +186,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D1DF20F1D168F4800BD6010 /* LoginViewController.swift in Sources */,
 				4D1DF20D1D16752800BD6010 /* UserListViewController.swift in Sources */,
 				A2E767C6194594DC00869113 /* ToDoItemViewController.swift in Sources */,
 				A2BD20971AC8A731007F7181 /* QSTodoDataModel.xcdatamodeld in Sources */,
+				4D1DF2191D169F7200BD6010 /* ProtectedPageViewController.swift in Sources */,
 				A2D9CBE41943C39D0017F096 /* ToDoTableViewController.swift in Sources */,
 				A2D9CBC41943C2540017F096 /* AppDelegate.swift in Sources */,
 			);

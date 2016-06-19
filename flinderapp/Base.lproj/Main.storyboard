@@ -5,6 +5,34 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
+        <!--Login View-->
+        <scene sceneID="bbF-QG-ANK">
+            <objects>
+                <viewController storyboardIdentifier="LoginViewController" id="q49-0y-zuY" customClass="LoginViewController" customModule="flinderapp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2sd-92-X6W"/>
+                        <viewControllerLayoutGuide type="bottom" id="jZf-mt-aQK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3Yi-2o-xV3">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lbA-58-xYV" customClass="FBSDKLoginButton">
+                                <rect key="frame" x="210" y="179" width="295" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.10829782975465041" blue="0.10601157909937531" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Login View" id="fjm-y4-Ybk"/>
+                    <connections>
+                        <outlet property="loginButton" destination="lbA-58-xYV" id="LeF-V1-tPr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kGQ-sk-beh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1531" y="97"/>
+        </scene>
         <!--Azure Mobile Services-->
         <scene sceneID="v2j-ei-0Wt">
             <objects>
@@ -15,7 +43,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="xtB-im-W7s" style="IBUITableViewCellStyleDefault" id="nsK-Da-6ym">
-                                <rect key="frame" x="0.0" y="86" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="22" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nsK-Da-6ym" id="WJg-MQ-TxZ">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
@@ -53,7 +81,32 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sn7-zH-IVo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2153" y="162"/>
+            <point key="canvasLocation" x="3771" y="136"/>
+        </scene>
+        <!--Protected Page-->
+        <scene sceneID="b6E-ZN-tGj">
+            <objects>
+                <viewController storyboardIdentifier="ProtectedPageViewController" id="dtH-af-Ymi" customClass="ProtectedPageViewController" customModule="flinderapp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tHn-7B-2cM"/>
+                        <viewControllerLayoutGuide type="bottom" id="AJS-7t-NO1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="GJL-5l-vd6" customClass="UITableView">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zc0-8z-rjJ">
+                                <rect key="frame" x="220" y="217" width="136" height="30"/>
+                                <state key="normal" title="Logout"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Protected Page" id="Q8P-S6-6YQ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zwG-uo-T1N" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3065" y="170"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="4uX-RI-Mvn">
@@ -135,7 +188,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MmN-xB-6h2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2886" y="168"/>
+            <point key="canvasLocation" x="4478" y="142"/>
         </scene>
         <!--Azure Mobile Services-->
         <scene sceneID="yNt-7v-plj">
@@ -154,12 +207,30 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="V6T-ri-3qt" kind="relationship" relationship="rootViewController" id="SPE-pK-6GL"/>
+                        <segue destination="q49-0y-zuY" kind="relationship" relationship="rootViewController" id="RvJ-F9-i5d"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FRr-xT-xwq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1359.375" y="168.75"/>
+            <point key="canvasLocation" x="909" y="136"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="TgQ-F4-16I">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="XPJ-CF-N32" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3tV-NJ-V0b">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="dtH-af-Ymi" kind="relationship" relationship="rootViewController" id="9v8-dr-4Hp"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v64-fg-VGj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2281" y="170"/>
         </scene>
     </scenes>
 </document>
