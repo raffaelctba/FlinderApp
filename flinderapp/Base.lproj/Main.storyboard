@@ -43,7 +43,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="xtB-im-W7s" style="IBUITableViewCellStyleDefault" id="nsK-Da-6ym">
-                                <rect key="frame" x="0.0" y="22" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="86" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nsK-Da-6ym" id="WJg-MQ-TxZ">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
@@ -102,6 +102,20 @@
                                     <action selector="logoutButtonTapped:" destination="dtH-af-Ymi" eventType="touchUpInside" id="SQl-wc-FwX"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6u8-S6-JnH">
+                                <rect key="frame" x="277" y="126" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="V6T-ri-3qt" kind="show" id="u1n-t5-vlg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zGe-gZ-ZWf">
+                                <rect key="frame" x="296" y="452" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="hTy-gh-SDR" kind="show" id="GvK-y9-LLA"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -111,17 +125,17 @@
             </objects>
             <point key="canvasLocation" x="3065" y="170"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Azure Mobile Services-User-->
         <scene sceneID="4uX-RI-Mvn">
             <objects>
-                <tableViewController id="hTy-gh-SDR" sceneMemberID="viewController">
+                <tableViewController id="hTy-gh-SDR" customClass="UserTableViewController" customModule="flinderapp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="e6n-1o-f3w">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="nbF-Oi-baK" style="IBUITableViewCellStyleDefault" id="F7q-p6-iau">
-                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="F7q-p6-iau" id="NJV-nt-7Nz">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
@@ -143,10 +157,25 @@
                             <outlet property="delegate" destination="hTy-gh-SDR" id="cEb-ES-Lck"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Azure Mobile Services-User" id="q4x-7k-As0">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="BhE-Hv-fdg">
+                            <connections>
+                                <action selector="addUser:" destination="hTy-gh-SDR" id="NLm-So-ZsQ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="em8-2x-PRY" kind="show" identifier="addUser" id="gfR-I9-dBA"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yaz-Pt-fPY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="pLD-zG-MdL" userLabel="Refresh Control">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
             </objects>
-            <point key="canvasLocation" x="2051" y="803"/>
+            <point key="canvasLocation" x="3022" y="921"/>
         </scene>
         <!--Add Item-->
         <scene sceneID="RI1-O5-vZS">
@@ -160,7 +189,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3pO-Tr-BjV">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3pO-Tr-BjV">
                                 <rect key="frame" x="20" y="84" width="560" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
@@ -234,6 +263,51 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v64-fg-VGj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2281" y="170"/>
+        </scene>
+        <!--Add User-->
+        <scene sceneID="cAD-mK-6zv">
+            <objects>
+                <viewController id="em8-2x-PRY" userLabel="Add User" customClass="UserViewController" customModule="flinderapp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hGC-sj-Jry"/>
+                        <viewControllerLayoutGuide type="bottom" id="fT1-kE-d1z"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="TSr-EP-BR9">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3rY-B7-nhi">
+                                <rect key="frame" x="20" y="84" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="3rY-B7-nhi" firstAttribute="trailing" secondItem="TSr-EP-BR9" secondAttribute="trailingMargin" id="1Ie-1Z-TEx"/>
+                            <constraint firstItem="3rY-B7-nhi" firstAttribute="top" secondItem="hGC-sj-Jry" secondAttribute="bottom" constant="20" id="atc-qV-NK1"/>
+                            <constraint firstItem="3rY-B7-nhi" firstAttribute="leading" secondItem="TSr-EP-BR9" secondAttribute="leadingMargin" id="d6r-X8-n67"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add User" id="5Qz-bD-R4W">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Slu-SF-4v1">
+                            <connections>
+                                <action selector="cancelPressed:" destination="em8-2x-PRY" id="3js-Fe-8uW"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="hYD-CZ-Rc5">
+                            <connections>
+                                <action selector="savePressed:" destination="em8-2x-PRY" id="OAN-kl-IBq"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="text" destination="3rY-B7-nhi" id="O0i-Cd-6hT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="waS-NU-zRC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3964" y="822"/>
         </scene>
     </scenes>
 </document>
