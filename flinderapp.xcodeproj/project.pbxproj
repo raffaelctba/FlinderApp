@@ -22,6 +22,10 @@
 		A2E767C6194594DC00869113 /* ToDoItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E767C5194594DC00869113 /* ToDoItemViewController.swift */; };
 		A31A89F71BF3FDFA00C7B656 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A31A89F61BF3FDFA00C7B656 /* Launch Screen.storyboard */; };
 		A3BBD77D1C05181600DD0DB0 /* MicrosoftAzureMobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3BBD77C1C05181600DD0DB0 /* MicrosoftAzureMobile.framework */; };
+		D9712B6F1D1A5B89002E3E79 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9712B6E1D1A5B89002E3E79 /* ProfileViewController.swift */; };
+		D9712B711D1A5B92002E3E79 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9712B701D1A5B92002E3E79 /* SearchViewController.swift */; };
+		D9712B731D1A5B9B002E3E79 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9712B721D1A5B9B002E3E79 /* HistoryViewController.swift */; };
+		D9712B751D1DB4A7002E3E79 /* Icons in Resources */ = {isa = PBXBuildFile; fileRef = D9712B741D1DB4A7002E3E79 /* Icons */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +47,10 @@
 		A2E767C5194594DC00869113 /* ToDoItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoItemViewController.swift; sourceTree = "<group>"; };
 		A31A89F61BF3FDFA00C7B656 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		A3BBD77C1C05181600DD0DB0 /* MicrosoftAzureMobile.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MicrosoftAzureMobile.framework; sourceTree = "<group>"; };
+		D9712B6E1D1A5B89002E3E79 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		D9712B701D1A5B92002E3E79 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		D9712B721D1A5B9B002E3E79 /* HistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		D9712B741D1DB4A7002E3E79 /* Icons */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Icons; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,10 +87,14 @@
 		A2D9CBC01943C2540017F096 /* flinderapp */ = {
 			isa = PBXGroup;
 			children = (
+				D9712B6E1D1A5B89002E3E79 /* ProfileViewController.swift */,
+				D9712B721D1A5B9B002E3E79 /* HistoryViewController.swift */,
+				D9712B701D1A5B92002E3E79 /* SearchViewController.swift */,
 				A2BD20951AC8A731007F7181 /* QSTodoDataModel.xcdatamodeld */,
 				A2D9CBC31943C2540017F096 /* AppDelegate.swift */,
 				A2D9CBCA1943C2540017F096 /* Main.storyboard */,
 				A2D9CBCD1943C2540017F096 /* Images.xcassets */,
+				D9712B741D1DB4A7002E3E79 /* Icons */,
 				A2D9CBC11943C2540017F096 /* Supporting Files */,
 				A2D9CBE31943C39D0017F096 /* ToDoTableViewController.swift */,
 				A2E767C5194594DC00869113 /* ToDoItemViewController.swift */,
@@ -178,6 +190,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A2D9CBCC1943C2540017F096 /* Main.storyboard in Resources */,
+				D9712B751D1DB4A7002E3E79 /* Icons in Resources */,
 				A2D9CBCE1943C2540017F096 /* Images.xcassets in Resources */,
 				A31A89F71BF3FDFA00C7B656 /* Launch Screen.storyboard in Resources */,
 			);
@@ -190,12 +203,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9712B711D1A5B92002E3E79 /* SearchViewController.swift in Sources */,
 				4D1DF20F1D168F4800BD6010 /* LoginViewController.swift in Sources */,
 				4D1DF21D1D17955D00BD6010 /* UserViewController.swift in Sources */,
 				4D1DF20D1D16752800BD6010 /* UserTableViewController.swift in Sources */,
 				A2E767C6194594DC00869113 /* ToDoItemViewController.swift in Sources */,
+				D9712B731D1A5B9B002E3E79 /* HistoryViewController.swift in Sources */,
 				A2BD20971AC8A731007F7181 /* QSTodoDataModel.xcdatamodeld in Sources */,
 				4D1DF2191D169F7200BD6010 /* ProtectedPageViewController.swift in Sources */,
+				D9712B6F1D1A5B89002E3E79 /* ProfileViewController.swift in Sources */,
 				A2D9CBE41943C39D0017F096 /* ToDoTableViewController.swift in Sources */,
 				A2D9CBC41943C2540017F096 /* AppDelegate.swift in Sources */,
 			);
