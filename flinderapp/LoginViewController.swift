@@ -19,8 +19,15 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate{
         if(FBSDKAccessToken.currentAccessToken()==nil){
             print("User is not logged in")
         }else{
+            let protectedPage = self.storyboard?.instantiateViewControllerWithIdentifier("ProfileViewController") as! ProfileViewController
             
-           print("User is logged in")
+            let ProtectedPageNav = UINavigationController.init(rootViewController: protectedPage)
+            
+            let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+            
+            appDelegate.window?.rootViewController = ProtectedPageNav
+            print("User is logged in")
+            
         }
         loginButton.delegate = self
         loginButton.readPermissions=["public_profile","email", "user_friends"]
@@ -60,7 +67,7 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate{
                 }
             })
         
-         let protectedPage = self.storyboard?.instantiateViewControllerWithIdentifier("ProtectedPageViewController") as! ProtectedPageViewController
+         let protectedPage = self.storyboard?.instantiateViewControllerWithIdentifier("ProfileViewController") as! ProfileViewController
             
             let ProtectedPageNav = UINavigationController.init(rootViewController: protectedPage)
             

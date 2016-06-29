@@ -86,7 +86,7 @@
         <!--Profile-->
         <scene sceneID="PaR-5d-0eN">
             <objects>
-                <viewController id="nHr-5v-obV" customClass="ProfileViewController" customModule="flinderapp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProfileViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="nHr-5v-obV" customClass="ProfileViewController" customModule="flinderapp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="WXk-5h-IK4"/>
                         <viewControllerLayoutGuide type="bottom" id="R4f-sq-Fn7"/>
